@@ -1,46 +1,114 @@
-.header{
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.header {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #00c9ff, #92fe9d);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
-    width: 100px;  
+.logo {
+    width: 80px;
+    border-radius: 8px;
 }
 
-.nav-items>ul{
+.nav-items > ul {
     display: flex;
-    font-size: 24px;
-    padding: 10px 50px;
     list-style-type: none;
 }
 
-.nav-items>ul>li{
-    padding: 10px;
-    margin: 10px;
-}
-
-.res-card{
-    background-color: #f0f0f0;
-    width: 200px;
-    height: 300px;
-    padding: 5px;
-}
-.res-card:hover{
+.nav-items > ul > li {
+    margin: 0 15px;
+    font-weight: 600;
+    color: #fff;
     cursor: pointer;
-    border: 1px solid black;
+    transition: color 0.3s ease;
 }
 
-.search{
-    padding: 10px;
+.nav-items > ul > li:hover {
+    color: #222;
 }
 
-.res-logo{
-    width: 100%;
-    height: 45%;
+/* Search */
+.search {
+    padding: 20px 30px;
+    text-align: center;
 }
 
-.res-container{
+.search input {
+    width: 50%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Restaurant Card Container */
+.res-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 30px;
+}
+
+/* Restaurant Card */
+.res-card {
+    background: #fff;
+    width: 250px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.res-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.res-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.res-card h3 {
+    font-size: 20px;
+    margin-top: 12px;
+    color: #333;
+}
+
+.res-card h4 {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Footer */
+.Footer {
+    background: linear-gradient(90deg, #92fe9d, #00c9ff);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 30px;
+    border-top: 2px solid #ccc;
 }
