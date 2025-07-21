@@ -112,3 +112,8 @@ body {
     margin-top: 30px;
     border-top: 2px solid #ccc;
 }
+
+.fliter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
