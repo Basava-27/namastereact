@@ -40,3 +40,21 @@ import Component from "path";
 
 export const Component;
 import {Component} from "path";
+
+# React Hooks
+ (Normal JS functions)
+ - useState() - suprepowerful state variables
+ - useEffect()
+
+# Reconciliation Algorithm (React Fiber)
+ React Fiber is the internal engine introduced in React 16 that powers the reconciliation algorithm—the process React uses to determine how to efficiently update the DOM in response to changes in state or props. It improves upon the older synchronous algorithm by enabling asynchronous rendering, allowing React to break rendering work into small units and pause, resume, or abort tasks as needed. This improves performance, especially for large or complex UI trees. Key features of Fiber include:
+
+   Incremental rendering: rendering work is split into chunks, allowing React to yield to the browser.
+
+   Prioritization: urgent updates (like user input) are processed before non-urgent ones.
+
+   Concurrency support: powers features like Concurrent Mode and Suspense.
+
+   Better error handling and debugging: more flexible lifecycle management.
+
+ During reconciliation, Fiber builds a new virtual tree of components (the Fiber tree), compares it with the previous one, and marks nodes with effects like placement, update, or deletion. In the commit phase, these effects are applied to the real DOM. It also heavily relies on keys to efficiently reconcile lists by matching elements. Overall, Fiber gives React the ability to build highly responsive and maintainable UIs.

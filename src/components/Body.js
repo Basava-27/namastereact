@@ -1,7 +1,11 @@
-import resObj from "../utils/mockdata.js";
+import resList from "../utils/mockdata.js";
 import RestaurantCard from "./RestaurantCard.js";
+import { useState } from "react";
 
 const Body = () => {
+    // Local state Variable
+    const [resObj,setListOfresObj]=useState(resList);
+
     return (
         <div className="body">
             <div className="search">
@@ -11,7 +15,10 @@ const Body = () => {
                 <button 
                     className="filter-btn" 
                     onClick={()=>{
-                        console.log("Button Clicked");
+                        const filterList=resObj.filter(
+                            (res)=>res.info.avgRating>4.2
+                        );
+                        setListOfresObj(filterList);
                     }}>
                     Top Rated Restaurants
                     </button>
